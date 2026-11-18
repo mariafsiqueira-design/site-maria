@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento Virtual - Jardim Encantado</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Arquivo CSS Externo -->
+    <link rel="stylesheet" href="styleChatBotEmpresa.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVEGAÇÃO COM OS HIPERLINKS -->
+    <header>
+        <div class="header-container">
+            <div class="logo-box">
+                <img src="logo.png" alt="Logotipo Jardim Encantado" class="logo-img">
+                <div>
+                    <span class="brand-name">Jardim Encantado</span>
+                    <p class="slogan">Cafés que adoçam e flores que encantam!</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="#produtos">Buquês & Lanches</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="htmlChatEmpresa.html" class="active">Chat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO DO CHATBOT -->
+    <main class="chat-section">
+        <div class="chat-card">
+            <div class="chat-header">
+                <h2>Gato Risonho 🐱🌸</h2>
+                <p>Assistente virtual do Jardim Encantado — tire suas dúvidas sobre arranjos, encomendas, preços e entregas.</p>
+            </div>
+
+            <!-- CAIXA DE TEXTO 1: CHAVE DE API -->
+            <div class="api-config">
+                <label for="api-key">Chave de API (OpenAI):</label>
+                <div class="api-input-wrapper">
+                    <input type="password" id="api-key" placeholder="Cole aqui sua chave sk-..." autocomplete="off">
+                    <button type="button" id="toggle-api" class="btn-toggle" title="Mostrar/Ocultar chave">👁️</button>
+                </div>
+            </div>
+
+            <!-- ÁREA DE EXIBIÇÃO DAS MENSAGENS -->
+            <div id="chat-box" class="chat-box">
+                <div class="mensagem msg-bot">
+                    <span class="autor">Gato Risonho</span>
+                    <p>Olá! Bem-vindo ao Jardim Encantado. Como posso ajudar você hoje com nossas guloseimas?</p>
+                </div>
+            </div>
+
+            <!-- CAIXA DE TEXTO 2: MENSAGEM DE ENVIO AO CHATGPT -->
+            <form id="chat-form" class="chat-input-area">
+                <input type="text" id="mensagem-usuario" placeholder="Digite sua mensagem para o Gato Risonho..." required autocomplete="off">
+                <button type="submit" id="btn-enviar" class="btn-enviar">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p><strong>Jardim Encantado</strong> &copy; Todos os direitos reservados.</p>
+        <p>Desenvolvido por: Maria Fernanda</p>
+        <p>Contato: <a href="mailto:maria.f.siqueira@edu.senai.br">maria.f.siqueira@edu.senai.br</a></p>
+    </footer>
+
+    <!-- Arquivo JS Externo -->
+    <script src="scriptChatEmpresa.js"></script>
+</body>
+</html>
